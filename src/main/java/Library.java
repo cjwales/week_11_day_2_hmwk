@@ -22,5 +22,6 @@ public class Library {
 
     public void lendBook(Book book, Borrower borrower) {
         borrower.addBook(book);
+        this.books.remove(book);
     }
 }

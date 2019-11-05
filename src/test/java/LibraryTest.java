@@ -41,7 +41,9 @@ public class LibraryTest {
 
     @Test
     public void libraryCanLendBook() {
+        assertEquals(0, borrower.countBooks());
         library.addBook(theLaundryFiles);
+        assertEquals(1, library.countBooks());
         library.lendBook(theLaundryFiles, borrower);
         assertEquals(0, library.countBooks());
         assertEquals(1, borrower.countBooks());
