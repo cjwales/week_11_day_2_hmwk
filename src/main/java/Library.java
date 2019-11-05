@@ -19,4 +19,8 @@ public class Library {
         if (countBooks() < this.capacity)
         this.books.add(book);
     }
+
+    public void lendBook(Book book, Borrower borrower) {
+        borrower.addBook(book);
+    }
 }
